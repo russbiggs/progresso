@@ -20,7 +20,7 @@ import 'package:progresso/progresso.dart';
 
 In its simplest Progress takes a progress parameter
 
-![basic](https://raw.githubusercontent.com/russbiggs/progresso/master/imgs/basic.png)
+![basic](https://raw.githubusercontent.com/russbiggs/progresso/main/imgs/basic.png)
 
 ```dart
 Progresso(progress: 0.5);
@@ -28,7 +28,7 @@ Progresso(progress: 0.5);
 
 You can also configure the color
 
-![custom color](https://raw.githubusercontent.com/russbiggs/progresso/master/imgs/color.png)
+![custom color](https://raw.githubusercontent.com/russbiggs/progresso/main/imgs/color.png)
 
 
 ```dart
@@ -41,7 +41,7 @@ Progresso(
 
 Progresso can even start at a value that is not zero!
 
-![non-zero start](https://raw.githubusercontent.com/russbiggs/progresso/master/imgs/start.png)
+![non-zero start](https://raw.githubusercontent.com/russbiggs/progresso/main/imgs/start.png)
 
 
 ```dart 
@@ -50,7 +50,7 @@ Progresso(start: 0.3, progress: 0.5);
 
 Give the progress bar different stroke caps:
 
-![round end caps](https://raw.githubusercontent.com/russbiggs/progresso/master/imgs/endcap.png)
+![round end caps](https://raw.githubusercontent.com/russbiggs/progresso/main/imgs/endcap.png)
 
 
 ```dart 
@@ -63,7 +63,7 @@ Progresso(
 
 Give a List of points to show points along the progress bar
 
-![points](https://raw.githubusercontent.com/russbiggs/progresso/master/imgs/points.png)
+![points](https://raw.githubusercontent.com/russbiggs/progresso/main/imgs/points.png)
 
 
 ```dart
