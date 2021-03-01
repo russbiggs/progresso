@@ -2,19 +2,56 @@ library progresso;
 
 import 'package:flutter/material.dart';
 
+
+/// 
 class Progresso extends StatefulWidget {
+
+  /// The starting position of the progress bar. Defaults to 0.0 must be less
+  /// than 1.0
   final double start;
+  
+  /// The pogress position of the progress bar. Defaults to 0.0 must be less 
+  /// than 1.0 and greater than start.
   final double progress;
+  
+  /// a List of double values that are represented on the progress line as 
+  /// points. Must be greater than or equal to 0.0 and less than or equal to 1.0
   final List<double> points;
+  
+  /// The Color of the progress bar
   final Color progressColor;
+  
+  /// The color of the background bar
   final Color backgroundColor;
+  
+  /// The stroke width of the progress bar
   final double progressStrokeWidth;
+  
+  /// The cap style of the progress bar. Defaults to square, options include 
+  /// StrokeCap.round, StrokeCap.square, StrokeCap.butt
   final StrokeCap progressStrokeCap;
+  
+  ///the stroke width of the background bar
   final double backgroundStrokeWidth;
+  
+  /// The cap style of the progress bar. Defaults to square, options include 
+  /// StrokeCap.round, StrokeCap.square, StrokeCap.butt
   final StrokeCap backgroundStrokeCap;
+  
+  /// The Color of the outer circle of the points given in the points parameter
+  /// defaults to Colors.blue
   final Color pointColor;
+  
+  /// The Color of the outer circle of the points given in the points parameter
+  /// defaults to Colors.white
   final Color pointInnerColor;
+  
+  /// The radius of the outer circle of the points given in the points parameter
+  /// defaults to 7.5
   final double pointRadius;
+  
+  /// The radius of the inner circle of the points given in the points parameter
+  /// defaults to 2.5
   final double pointInnerRadius;
 
   Progresso(
@@ -42,15 +79,15 @@ class _ProgressoState extends State<Progresso> {
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
-        foregroundPainter: ProgressoPainter(
+        foregroundPainter: _ProgressoPainter(
             progress: widget.progress,
             start: widget.start,
             progressColor: widget.progressColor,
             backgroundColor: widget.backgroundColor,
             progressStrokeWidth: widget.progressStrokeWidth,
             progressStrokeCap: widget.progressStrokeCap,
-            backgroundStrokeWidth : widget.backgroundStrokeWidth,
-            backgroundStrokeCap : widget.backgroundStrokeCap,
+            backgroundStrokeWidth: widget.backgroundStrokeWidth,
+            backgroundStrokeCap: widget.backgroundStrokeCap,
             pointColor: widget.pointColor,
             pointInnerColor: widget.pointInnerColor,
             pointRadius: widget.pointRadius,
@@ -60,7 +97,7 @@ class _ProgressoState extends State<Progresso> {
   }
 }
 
-class ProgressoPainter extends CustomPainter {
+class _ProgressoPainter extends CustomPainter {
   final Paint _paintBackground = new Paint();
   final Paint _paintProgress = new Paint();
   final Paint _paintPoint = new Paint();
@@ -79,7 +116,7 @@ class ProgressoPainter extends CustomPainter {
   final double pointInnerRadius;
   final List<double> points;
 
-  ProgressoPainter(
+  _ProgressoPainter(
       {this.start,
       this.progress,
       this.progressColor,
@@ -131,13 +168,13 @@ class ProgressoPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(CustomPainter oldDelegate) {
-    final old = oldDelegate as ProgressoPainter;
+    final old = oldDelegate as _ProgressoPainter;
     return old.progress != this.progress ||
         old.start != this.start ||
         old.progressColor != this.progressColor ||
         old.backgroundColor != this.backgroundColor ||
         old.progressStrokeWidth != this.progressStrokeWidth ||
-        old.backgroundStrokeWidth != this.backgroundStrokeWidth || 
+        old.backgroundStrokeWidth != this.backgroundStrokeWidth ||
         old.pointColor != this.pointColor ||
         old.pointInnerColor != this.pointInnerColor ||
         old.pointRadius != this.pointRadius ||
