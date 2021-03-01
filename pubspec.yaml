@@ -1,6 +1,6 @@
 name: progresso
 description: A linear progress bar for flutter, allow for non-zero starting, points along line, and custom styling
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/russbiggs/progresso
 
 environment:
