@@ -18,7 +18,7 @@ import 'package:progresso/progresso.dart';
 
 ## Features
 
-In its simplest Progress takes a progress parameter
+In its simplest form Progresso takes a progress parameter (0.0 to 1.0)
 
 ![basic](https://raw.githubusercontent.com/russbiggs/progresso/main/imgs/basic.png)
 
