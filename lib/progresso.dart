@@ -175,9 +175,12 @@ class _ProgressoPainter extends CustomPainter {
         old.backgroundColor != this.backgroundColor ||
         old.progressStrokeWidth != this.progressStrokeWidth ||
         old.backgroundStrokeWidth != this.backgroundStrokeWidth ||
+        old.progressStrokeCap != this.progressStrokeCap ||
+        old.backgroundStrokeCap != this.backgroundStrokeCap ||
         old.pointColor != this.pointColor ||
         old.pointInnerColor != this.pointInnerColor ||
         old.pointRadius != this.pointRadius ||
-        old.pointInnerRadius != this.pointInnerRadius;
+        old.pointInnerRadius != this.pointInnerRadius ||
+        old.points != this.points;
   }
 }
