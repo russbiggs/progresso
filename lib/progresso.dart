@@ -55,9 +55,9 @@ class Progresso extends StatefulWidget {
   final double pointInnerRadius;
 
   Progresso(
-      {Key key,
-      this.start = 0,
-      this.progress,
+      {Key? key,
+      this.start = 0.0,
+      this.progress = 0.0,
       this.progressColor = Colors.blue,
       this.backgroundColor = Colors.grey,
       this.progressStrokeWidth = 10.0,
@@ -117,19 +117,20 @@ class _ProgressoPainter extends CustomPainter {
   final List<double> points;
 
   _ProgressoPainter(
-      {this.start,
-      this.progress,
-      this.progressColor,
-      this.backgroundColor,
-      this.progressStrokeWidth,
-      this.progressStrokeCap,
-      this.backgroundStrokeWidth,
-      this.backgroundStrokeCap,
-      this.points,
-      this.pointColor,
-      this.pointInnerColor,
-      this.pointInnerRadius,
-      this.pointRadius}) {
+      {
+       required this.start,
+      required this.progress,
+      required this.progressColor,
+      required this.backgroundColor,
+      required this.progressStrokeWidth,
+      required this.progressStrokeCap,
+      required this.backgroundStrokeWidth,
+      required this.backgroundStrokeCap,
+      required this.points,
+      required this.pointColor,
+      required this.pointInnerColor,
+      required this.pointInnerRadius,
+      required this.pointRadius}) {
     _paintBackground.color = backgroundColor;
     _paintBackground.style = PaintingStyle.stroke;
     _paintBackground.strokeCap = backgroundStrokeCap;
