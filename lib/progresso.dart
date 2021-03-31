@@ -10,7 +10,7 @@ class Progresso extends StatefulWidget {
   /// than 1.0
   final double start;
   
-  /// The pogress position of the progress bar. Defaults to 0.0 must be less 
+  /// The progress position of the progress bar. Defaults to 0.0 must be less 
   /// than 1.0 and greater than start.
   final double progress;
   
@@ -118,7 +118,7 @@ class _ProgressoPainter extends CustomPainter {
 
   _ProgressoPainter(
       {
-       required this.start,
+      required this.start,
       required this.progress,
       required this.progressColor,
       required this.backgroundColor,
