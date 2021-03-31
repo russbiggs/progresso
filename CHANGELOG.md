@@ -13,3 +13,8 @@
 * redraw points when data changes
 * redraw background stroke cap when background stroke cap changes
 * redraw progress stroke cap when progress stroke cap changes
+
+
+## [0.3.0] - March 31 2021
+
+* migrate to null safety
