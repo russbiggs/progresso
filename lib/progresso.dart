@@ -2,54 +2,52 @@ library progresso;
 
 import 'package:flutter/material.dart';
 
-
-/// 
+///
 class Progresso extends StatefulWidget {
-
   /// The starting position of the progress bar. Defaults to 0.0 must be less
   /// than 1.0
   final double start;
-  
-  /// The progress position of the progress bar. Defaults to 0.0 must be less 
+
+  /// The progress position of the progress bar. Defaults to 0.0 must be less
   /// than 1.0 and greater than start.
   final double progress;
-  
-  /// a List of double values that are represented on the progress line as 
+
+  /// a List of double values that are represented on the progress line as
   /// points. Must be greater than or equal to 0.0 and less than or equal to 1.0
   final List<double> points;
-  
+
   /// The Color of the progress bar
   final Color progressColor;
-  
+
   /// The color of the background bar
   final Color backgroundColor;
-  
+
   /// The stroke width of the progress bar
   final double progressStrokeWidth;
-  
-  /// The cap style of the progress bar. Defaults to square, options include 
+
+  /// The cap style of the progress bar. Defaults to square, options include
   /// StrokeCap.round, StrokeCap.square, StrokeCap.butt
   final StrokeCap progressStrokeCap;
-  
+
   ///the stroke width of the background bar
   final double backgroundStrokeWidth;
-  
-  /// The cap style of the progress bar. Defaults to square, options include 
+
+  /// The cap style of the progress bar. Defaults to square, options include
   /// StrokeCap.round, StrokeCap.square, StrokeCap.butt
   final StrokeCap backgroundStrokeCap;
-  
+
   /// The Color of the outer circle of the points given in the points parameter
   /// defaults to Colors.blue
   final Color pointColor;
-  
+
   /// The Color of the outer circle of the points given in the points parameter
   /// defaults to Colors.white
   final Color pointInnerColor;
-  
+
   /// The radius of the outer circle of the points given in the points parameter
   /// defaults to 7.5
   final double pointRadius;
-  
+
   /// The radius of the inner circle of the points given in the points parameter
   /// defaults to 2.5
   final double pointInnerRadius;
@@ -117,8 +115,7 @@ class _ProgressoPainter extends CustomPainter {
   final List<double> points;
 
   _ProgressoPainter(
-      {
-      required this.start,
+      {required this.start,
       required this.progress,
       required this.progressColor,
       required this.backgroundColor,
